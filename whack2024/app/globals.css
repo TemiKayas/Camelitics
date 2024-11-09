@@ -1,27 +1,27 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/*@tailwind base;*/
+/*@tailwind components;*/
+/*@tailwind utilities;*/
 
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-:root {
-  --background: #ffffff;
-  --foreground: #bffefe;
-}
+/** {*/
+/*  margin: 0;*/
+/*  padding: 0;*/
+/*  box-sizing: border-box;*/
+/*}*/
+/*:root {*/
+/*  --background: #ffffff;*/
+/*  --foreground: #bffefe;*/
+/*}*/
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #bffefe;
-    --foreground: #ededed;
-  }
-}
+/*@media (prefers-color-scheme: dark) {*/
+/*  :root {*/
+/*    --background: #bffefe;*/
+/*    --foreground: #ededed;*/
+/*  }*/
+/*}*/
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Monospaced, Arial, sans-serif;
-}
+/*body {*/
+/*  color: var(--foreground);*/
+/*  background: var(--background);*/
+/*  font-family: Monospaced, Arial, sans-serif;*/
+/*}*/

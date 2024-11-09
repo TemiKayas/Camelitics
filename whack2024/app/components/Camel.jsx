@@ -15,10 +15,10 @@ const levitate = keyframes`
 
 const glow = keyframes`
     0%, 100% {
-        box-shadow: 0 0 5px rgba(255, 255, 0, 0.5), 0 0 10px rgba(255, 255, 0, 0.3), 0 0 15px rgba(255, 255, 0, 0.2);
+        filter: drop-shadow(0 0 5px rgba(255, 255, 0, 0.3)) drop-shadow(0 0 10px rgba(255, 255, 0, 0.3));
     }
     50% {
-        box-shadow: 0 0 10px rgba(255, 255, 0, 0.7), 0 0 15px rgba(255, 255, 0, 0.5), 0 0 20px rgba(255, 255, 0, 0.3);
+        filter: drop-shadow(0 0 10px rgba(255, 255, 0, 0.5)) drop-shadow(0 0 15px rgba(255, 255, 0, 0.5));
     }
 `;
 
@@ -26,7 +26,7 @@ const FloatingCamelContainer = styled.div`
     display: flex;
     flex-direction: column;
     margin: 0 auto;
-    padding-top: 20%;
+    padding-top: 45%;
     transform: translate(-50%, -50%);
     animation: ${levitate} 3s infinite;
 `;

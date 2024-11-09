@@ -9,12 +9,12 @@ import Footer from "@/app/components/Footer";
 export default function Home() {
     return (
         <>
+            <Header />
             <Box sx={{ scrollSnapType: "y mandatory", scrollBehavior: "smooth", backgroundColor: "#f0f0f0", padding: "2rem 0" }}>
-                <Container sx={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "0rem" }}>
-                    <Header />
+                {/*<Container sx={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "0rem" }}>*/}
                     <SkySection />
                     <BazaarSection />
-                </Container>
+                {/*</Container>*/}
             </Box>
             <Footer />
             <SnapToTop />

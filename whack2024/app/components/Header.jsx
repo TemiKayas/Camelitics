@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 
 
-const StyledHeader = styled.div`
+const StyledHeader = styled(Typography)`
     border: 1px solid black;
     border-radius: 15px;
     padding: 10% 38%;
@@ -14,11 +14,13 @@ const StyledHeader = styled.div`
 
 export default function Header() {
     return (
+
         <StyledHeader>
             <Typography variant="h2" sx={{ display: "flex", align: "top"}}>
                 Camelitics
             </Typography>
             <Typography variant="h4">Desc.</Typography>
         </StyledHeader>
+
     );
 }
