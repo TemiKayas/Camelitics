@@ -1,0 +1,21 @@
+{
+    "testId": "92132218-b576-49fd-8deb-e18d15c4ee67",
+    "name": "Extension",
+    "version": "1.0.0",
+    "manifestVersion": 2,
+    "requirements": {
+        "apps": [
+            {
+                "name": "Express",
+                "apiVersion": 1
+            }
+        ]
+    },
+    "entryPoints": [
+        {
+            "type": "panel",
+            "id": "panel1",
+            "main": "index.html"
+        }
+    ]
+}
