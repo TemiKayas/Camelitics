@@ -1,6 +1,6 @@
 import { Box, Typography } from "@mui/material";
 
-export default function BoxSection({ backgroundColor, height, content, style }) {
+export default function BoxSection({ backgroundColor, height, content, style, children }) {
     return (
         <Box
             sx={{
@@ -15,7 +15,7 @@ export default function BoxSection({ backgroundColor, height, content, style }) 
                 ...style, // Allows inline styles like background images or gradients
             }}
         >
-            <Typography variant="h4">{content}</Typography>
+            <Typography variant="h4">{children}</Typography>
         </Box>
     );
 }

@@ -4,7 +4,7 @@ import SkySection from "@/app/components/SkySection";
 import BazaarSection from "@/app/components/BazaarSection";
 import SnapToTop from "@/app/components/SnapToTop";
 import Footer from "@/app/components/Footer";
-import FloatingCamel from "@/app/components/Camel";
+
 
 export default function Home() {
     return (

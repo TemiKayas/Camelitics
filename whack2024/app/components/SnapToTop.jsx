@@ -2,7 +2,7 @@
 import { Button } from "@mui/material";
 import { useState, useEffect } from "react";
 
-export default function ScrollToTopButton() {
+export default function SnapToTop() {
     const [showButton, setShowButton] = useState(false);
 
     useEffect(() => {
@@ -22,9 +22,9 @@ export default function ScrollToTopButton() {
                 sx={{
                     position: "fixed",
                     bottom: "2rem",
-                    right: "2rem",
+                    right: "4rem",
                     zIndex: 1000,
-                    bgcolor: "orange"
+                    bgcolor: "brown"
                 }}
             >
                 Back to Top
