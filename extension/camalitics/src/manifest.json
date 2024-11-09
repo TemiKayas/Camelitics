@@ -1,0 +1,21 @@
+{
+    "testId": "f45003ac-a7cb-4266-99d8-a78469878835",
+    "name": "Camalitics",
+    "version": "1.0.0",
+    "manifestVersion": 2,
+    "requirements": {
+        "apps": [
+            {
+                "name": "Express",
+                "apiVersion": 1
+            }
+        ]
+    },
+    "entryPoints": [
+        {
+            "type": "panel",
+            "id": "panel1",
+            "main": "index.html"
+        }
+    ]
+}
