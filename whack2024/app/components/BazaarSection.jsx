@@ -1,11 +1,14 @@
 import BoxSection from "@/app/components/BoxSection";
 import Camel from "@/app/components/Camel";
 import AddOnButton from "@/app/components/AddOnButton";
+import CloudButtonComponent from "@/app/components/CloudButton";
+
 
 export default function BazaarSection() {
     return (
         <BoxSection
-            height="100vh"
+            height="120vh"
+            width="100%"
             style={{
                 backgroundImage: `url('/Camelitics BG.png')`,
                 backgroundSize: "cover",
@@ -15,6 +18,8 @@ export default function BazaarSection() {
             }}
         >
             {/* Ensure the button is visible above the background */}
+
+            <CloudButtonComponent/>
             <AddOnButton />
             <Camel />
         </BoxSection>

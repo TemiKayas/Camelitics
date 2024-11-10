@@ -4,7 +4,7 @@ export default function BoxSection({ backgroundColor, height, content, style, ch
     return (
         <Box
             sx={{
-                height: height || "400px",
+                height: height || "500px",
                 width: "100%",
                 color: "#fff",
                 display: "flex",

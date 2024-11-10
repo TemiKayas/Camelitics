@@ -3,6 +3,7 @@
 import styled, { keyframes } from "styled-components";
 import Image from "next/image";
 import Mascot from "@/public/Camel.png";
+import {Typography} from "@mui/material";
 
 const levitate = keyframes`
     0%, 100% {
@@ -22,23 +23,43 @@ const glow = keyframes`
     }
 `;
 
+const scale = keyframes`
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+`;
+
 const FloatingCamelContainer = styled.div`
     display: flex;
     flex-direction: column;
-    margin: 0 auto;
-    padding-top: 45%;
-    transform: translate(-50%, -50%);
-    animation: ${levitate} 3s infinite;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    margin-top: 90px;
 `;
 
+const StyledSlogan = styled(Typography)`
+    margin: 0;
+    padding: 0;
+    color: #ff8600;
+`
 const GlowingImage = styled(Image)`
-    animation: ${glow} 2s infinite;
+    animation: ${glow} 2s infinite, ${levitate} 3s infinite, ${scale} 8s infinite;
+    will-change: transform, filter;
 `;
 
 export default function Camel() {
     return (
+        <>
         <FloatingCamelContainer>
+            <StyledSlogan variant="caption">Hop on the Magic Carpet</StyledSlogan>
             <GlowingImage src={Mascot} alt="Levitating Camel" width={400} height={400} />
+
         </FloatingCamelContainer>
+        <StyledSlogan variant="h4">We Have You On Our Backs</StyledSlogan>
+        </>
     );
 }

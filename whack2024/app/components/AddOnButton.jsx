@@ -28,14 +28,14 @@ export default function AddOnButton() {
             sx={{
                 display: "flex",
                 flexDirection: "row",
-                my: 0,
+                my: .5,
                 mx: 'auto',
-                py: 2,
-                px: 4,
-                width: "30%",
+                py: 1,
+                px: 'auto',
+                width: "17%",
                 bgcolor: "darkorange",
                 color: 'black',
-                fontSize: '.8rem',
+                fontSize: '.7rem',
                 fontWeight: 'bold',
                 borderRadius: '8px',
                 boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
@@ -46,7 +46,7 @@ export default function AddOnButton() {
                 },
             }}
         >
-            Add On Button
+            Try in Adobe Express
         </Button>
     )
 }

@@ -12,6 +12,7 @@ const geistMono = localFont({
   weight: "100 900",
 });
 
+
 export const metadata = {
   title: "Camelitics",
   description: "Hump | SEO ",
