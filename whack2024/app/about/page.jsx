@@ -16,8 +16,8 @@ const developers = [
     },
     {
         name: "Artemios Kayas",
-        role: "Adobe Express Developer",
-        description: "Specializes in Adobe Express integrations, creating efficient workflows to enhance design productivity.",
+        role: "Head Hancho",
+        description: "Specializes in Adobe Express integrations, and building extensions using Javascript and React, creating efficient workflows to enhance design productivity.",
         avatar: "/images/artemios.jpg"
     },
     {
