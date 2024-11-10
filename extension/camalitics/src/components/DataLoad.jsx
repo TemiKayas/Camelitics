@@ -61,7 +61,7 @@ function DataLoad({ onDataLoad }) {
                 />
                 <label htmlFor="fileUpload">
                     <MyButton onPress={() => document.getElementById('fileUpload').click()}>
-                        Upload Analytics Data
+                        Import Data
                     </MyButton>
                 </label>
                 {fileData && <div style={{ marginTop: '10px', color: '#4caf50' }}>Data loaded successfully!</div>}

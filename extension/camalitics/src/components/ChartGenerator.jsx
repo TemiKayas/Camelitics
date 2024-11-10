@@ -7,47 +7,91 @@ import AddOnSdk from "https://new.express.adobe.com/static/add-on-sdk/sdk.js";
 function ChartGenerator({ data }) {
     const chartRef = useRef(null);
     const [chartImage, setChartImage] = useState(null);
+    const [chartType, setChartType] = useState('bar');
+    const chartInstanceRef = useRef(null);
 
     useEffect(() => {
         if (data) {
+            if (chartInstanceRef.current) {
+                chartInstanceRef.current.destroy();
+            }
+
+            const uniqueData = Array.from(new Map(data.report.data.rows.map(row => [row.dimensions[1], row])).values());
+
+            const colors = [
+                'rgba(255, 99, 132, 0.6)',
+                'rgba(54, 162, 235, 0.6)',
+                'rgba(255, 206, 86, 0.6)',
+                'rgba(75, 192, 192, 0.6)',
+                'rgba(153, 102, 255, 0.6)',
+                'rgba(255, 159, 64, 0.6)'
+            ];
+
+            const borderColors = [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ];
+
+            const assignedColors = uniqueData.map((_, index) => colors[index % colors.length]);
+            const assignedBorderColors = uniqueData.map((_, index) => borderColors[index % borderColors.length]);
+
             const ctx = chartRef.current.getContext('2d');
-            new Chart(ctx, {
-                type: 'bar',
+            chartInstanceRef.current = new Chart(ctx, {
+                type: chartType,
                 data: {
-                    labels: data.report.data.rows.map(row => row.dimensions[1]), // Using page names as labels
+                    labels: uniqueData.map(row => row.dimensions[1]),
                     datasets: [
                         {
                             label: 'Pageviews',
-                            data: data.report.data.rows.map(row => row.metrics[0]), // Using pageviews as data
-                            backgroundColor: 'rgba(75, 192, 192, 0.6)',
+                            data: uniqueData.map(row => row.metrics[0]),
+                            backgroundColor: assignedColors,
+                            borderColor: assignedBorderColors,
+                            borderWidth: 1
                         },
                     ],
                 },
                 options: {
                     responsive: true,
+                    maintainAspectRatio: true,
                     plugins: {
                         legend: {
+                            display: chartType !== 'bar', // Disable legend only for the bar chart
                             position: 'top',
+                            labels: {
+                                boxWidth: 10,
+                                padding: 10,
+                            },
                         },
                         title: {
                             display: true,
                             text: 'Pageviews by Page',
                         },
                     },
+                    layout: {
+                        padding: {
+                            left: 20,
+                            right: 20,
+                            top: 20,
+                            bottom: 20
+                        }
+                    }
                 },
             });
 
-            // Automatically export as JPG once the chart is generated and display it
             setTimeout(() => {
-                html2canvas(chartRef.current.parentElement).then(canvas => {
+                html2canvas(chartRef.current, { useCORS: true }).then(canvas => {
                     canvas.toBlob(blob => {
                         const imageDataUrl = URL.createObjectURL(blob);
                         setChartImage(imageDataUrl);
-                    }, 'image/jpeg');
+                    }, 'image/png');
                 });
-            }, 1000); // Adding slight delay to ensure chart rendering is complete
+            }, 1000);
         }
-    }, [data]);
+    }, [data, chartType]);
 
     const handleAddToProject = () => {
         if (chartImage) {
@@ -55,8 +99,8 @@ function ChartGenerator({ data }) {
                 .then(response => response.blob())
                 .then(blob => {
                     AddOnSdk.app.document.addImage(blob, {
-                        mimeType: 'image/jpeg',
-                        name: 'chart.jpg',
+                        mimeType: 'image/png',
+                        name: 'chart.png',
                     }).then(() => {
                         console.log('Chart image added to the project successfully.');
                     }).catch(error => {
@@ -66,9 +110,25 @@ function ChartGenerator({ data }) {
         }
     };
 
+    const handleChartTypeChange = (e) => {
+        setChartType(e.target.value);
+    };
+
     return (
-        <div>
-            <canvas ref={chartRef} width={400} height={400} />
+        <div style={{ overflow: 'hidden', maxWidth: '100%', maxHeight: '100%' }}>
+            <div style={{ marginBottom: '20px', textAlign: 'center' }}>
+                <label htmlFor="chartType" style={{ marginRight: '10px' }}>Select Chart Type:</label>
+                <select id="chartType" value={chartType} onChange={handleChartTypeChange}>
+                    <option value="bar">Bar Chart</option>
+                    <option value="pie">Pie Chart</option>
+                    <option value="doughnut">Doughnut Chart</option>
+                </select>
+            </div>
+            <div style={{ position: 'relative', width: '100%', height: '350px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                <div style={{ marginBottom: '10px' }}>
+                    <canvas ref={chartRef} style={{ display: 'block', width: '100%', height: '300px' }} />
+                </div>
+            </div>
             {chartImage && (
                 <div style={{ marginTop: '20px', textAlign: 'center' }}>
                     <img
