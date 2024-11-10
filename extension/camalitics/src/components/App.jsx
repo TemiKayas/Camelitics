@@ -15,20 +15,19 @@ import "./App.css";
 
 const MyDiv = styled.div`
     margin: 0 auto;
-    background-color: lightgray;
-    height: 90vh;
+    height: 120vh;
     width: 80vw;
-    border-radius: 45px;
+    border-radius: 30px;
 `;
 const MyP = styled.p`
     text-align: center;
 `;
 const SmallBubble = styled.div`
     padding: 3%;
-    margin: 3%;
+    margin-top: 10%;
     background-color: lightblue;
     border: 1px solid white;
-    border-radius: 45px;
+    border-radius: 25px;
 `;
 
 const App = ({ addOnUISdk }) => {
@@ -85,24 +84,6 @@ const App = ({ addOnUISdk }) => {
                         <ChartGenerator data={analyticsData} setChartImage={setChartImage} />
                     </SmallBubble>
                 )}
-                {/*{chartImage && (*/}
-                {/*    <div style={{ marginTop: "20px" }}>*/}
-                {/*        <img*/}
-                {/*            id="generated-chart"*/}
-                {/*            src={chartImage}*/}
-                {/*            alt="Generated Chart"*/}
-                {/*            style={{ cursor: "pointer" }}*/}
-                {/*            onClick={() => {*/}
-                {/*                if (window.AddOnSdk) {*/}
-                {/*                    window.AddOnSdk.app.document.addImage(chartImage);*/}
-                {/*                } else {*/}
-                {/*                    console.error("AddOnSdk is not available.");*/}
-                {/*                }*/}
-                {/*            }}*/}
-                {/*        />*/}
-                {/*        <p>Click the image to add it to your Adobe Express project or drag and drop it.</p>*/}
-                {/*    </div>*/}
-                {/*)}*/}
             </MyDiv>
         </Theme>
     );

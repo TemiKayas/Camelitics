@@ -1,7 +1,31 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { parse } from 'papaparse';
-import { Button } from "@swc-react/button"; // Replace this if needed with the appropriate button
+import { Button } from "@swc-react/button";
+import styled from 'styled-components';
+
+const UploadContainer = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+`;
+
+const Bubble = styled.div`
+    border: 2px solid #ccc;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+`;
+
+const MyButton = styled(Button)`
+    text-decoration: none;
+    border: none;
+`
 
 function DataLoad({ onDataLoad }) {
     const [fileData, setFileData] = useState(null);
@@ -26,21 +50,23 @@ function DataLoad({ onDataLoad }) {
     };
 
     return (
-        <div>
-            <input
-                type="file"
-                accept=".json"
-                onChange={handleFileChange}
-                style={{ display: 'none' }}
-                id="fileUpload"
-            />
-            <label htmlFor="fileUpload">
-                <Button variant="cta" onPress={() => document.getElementById('fileUpload').click()}>
-                    Upload Analytics Data
-                </Button>
-            </label>
-            {fileData && <div>Data loaded successfully!</div>}
-        </div>
+        <UploadContainer>
+            <Bubble>
+                <input
+                    type="file"
+                    accept=".json"
+                    onChange={handleFileChange}
+                    style={{ display: 'none' }}
+                    id="fileUpload"
+                />
+                <label htmlFor="fileUpload">
+                    <MyButton onPress={() => document.getElementById('fileUpload').click()}>
+                        Upload Analytics Data
+                    </MyButton>
+                </label>
+                {fileData && <div style={{ marginTop: '10px', color: '#4caf50' }}>Data loaded successfully!</div>}
+            </Bubble>
+        </UploadContainer>
     );
 }
 

@@ -70,11 +70,11 @@ function ChartGenerator({ data }) {
         <div>
             <canvas ref={chartRef} width={400} height={400} />
             {chartImage && (
-                <div style={{ marginTop: '20px' }}>
+                <div style={{ marginTop: '20px', textAlign: 'center' }}>
                     <img
                         src={chartImage}
                         alt="Generated Chart"
-                        style={{ cursor: 'pointer' }}
+                        style={{ cursor: 'pointer', width: '150px', height: 'auto', borderRadius: '10px', boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.1)' }}
                         onClick={handleAddToProject}
                     />
                     <p>Click the image to add it to your Adobe Express project.</p>
