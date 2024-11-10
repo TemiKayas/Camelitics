@@ -1,0 +1,150 @@
+{
+  "report": {
+    "data": {
+      "rows": [
+        {
+          "dimensions": ["2024-11-01", "Homepage"],
+          "metrics": [350, 300, 50, 20.0, 60, 120, 30, 150, "Learn More", "Contact Us", 120]
+        },
+        {
+          "dimensions": ["2024-11-02", "Products Page"],
+          "metrics": [280, 240, 40, 17.0, 55, 90, 20, 140, "Buy Now", 230]
+        },
+        {
+          "dimensions": ["2024-11-03", "Contact Page"],
+          "metrics": [150, 130, 20, 15.4, 40, 50, 10, 110, "Submit Form", "Learn More", 150]
+        },
+        {
+          "dimensions": ["2024-11-04", "Homepage"],
+          "metrics": [370, 320, 50, 18.5, 62, 140, 35, 160, "Learn More", 190]
+        },
+        {
+          "dimensions": ["2024-11-05", "Products Page"],
+          "metrics": [300, 260, 40, 15.4, 58, 100, 25, 130, "More Info", "Learn More", 170]
+        },
+        {
+          "dimensions": ["2024-11-06", "Contact Page"],
+          "metrics": [160, 140, 20, 12.5, 42, 55, 15, 120, "Contact Us", "Submit Form", 140]
+        },
+        {
+          "dimensions": ["2024-11-07", "Homepage"],
+          "metrics": [390, 340, 52, 19.1, 63, 150, 38, 180, "Contact Us", "Subscribe", 200]
+        },
+        {
+          "dimensions": ["2024-11-08", "Products Page"],
+          "metrics": [320, 270, 42, 15.6, 59, 110, 27, 145, "Learn More", 50]
+        },
+        {
+          "dimensions": ["2024-11-09", "Contact Page"],
+          "metrics": [170, 150, 22, 12.9, 43, 60, 17, 105, "Submit Form", 130]
+        },
+        {
+          "dimensions": ["2024-11-10", "Homepage"],
+          "metrics": [400, 350, 53, 18.9, 65, 155, 40, 175, "Learn More", "Contact Us", 210]
+        },
+        {
+          "dimensions": ["2024-11-11", "Products Page"],
+          "metrics": [330, 280, 45, 16.2, 60, 115, 30, 135, "Buy Now", "Learn More", 180]
+        },
+        {
+          "dimensions": ["2024-11-12", "Contact Page"],
+          "metrics": [180, 160, 23, 13.5, 45, 65, 18, 95, "Submit Form", 140]
+        },
+        {
+          "dimensions": ["2024-11-13", "Homepage"],
+          "metrics": [410, 360, 54, 19.3, 66, 160, 42, 185, "Subscribe", "Learn More", 220]
+        },
+        {
+          "dimensions": ["2024-11-14", "Products Page"],
+          "metrics": [335, 290, 46, 17.0, 61, 118, 31, 150, "Learn More", 190]
+        },
+        {
+          "dimensions": ["2024-11-15", "Contact Page"],
+          "metrics": [190, 170, 25, 14.0, 46, 68, 19, 100, "Contact Us", 150]
+        },
+        {
+          "dimensions": ["2024-11-16", "Homepage"],
+          "metrics": [415, 365, 55, 19.6, 67, 165, 43, 190, "Contact Us", "Subscribe", 230]
+        },
+        {
+          "dimensions": ["2024-11-17", "Products Page"],
+          "metrics": [345, 300, 48, 17.6, 62, 120, 32, 155, "Learn More", "Buy Now", 200]
+        },
+        {
+          "dimensions": ["2024-11-18", "Contact Page"],
+          "metrics": [195, 175, 26, 14.3, 47, 70, 20, 110, "Learn More", 160]
+        },
+        {
+          "dimensions": ["2024-11-19", "Homepage"],
+          "metrics": [425, 375, 56, 19.8, 68, 170, 45, 195, "Learn More", "Subscribe", 200]
+        },
+        {
+          "dimensions": ["2024-11-20", "Products Page"],
+          "metrics": [355, 310, 50, 17.8, 63, 125, 33, 160, "More Info", 90]
+        },
+        {
+          "dimensions": ["2024-11-21", "Contact Page"],
+          "metrics": [200, 180, 27, 14.5, 48, 72, 21, 120, "Submit Form", "Contact Us", 170]
+        },
+        {
+          "dimensions": ["2024-11-22", "Homepage"],
+          "metrics": [430, 380, 57, 20.0, 69, 175, 46, 200, "Learn More", "Subscribe", 250]
+        },
+        {
+          "dimensions": ["2024-11-23", "Products Page"],
+          "metrics": [360, 315, 51, 18.0, 64, 128, 34, 165, "Buy Now", "More Info", 115]
+        },
+        {
+          "dimensions": ["2024-11-24", "Contact Page"],
+          "metrics": [210, 185, 28, 14.7, 49, 75, 22, 125, "Submit Form", "Learn More", 180]
+        },
+        {
+          "dimensions": ["2024-11-25", "Homepage"],
+          "metrics": [435, 385, 58, 20.2, 70, 180, 47, 205, "Learn More", 260]
+        },
+        {
+          "dimensions": ["2024-11-26", "Products Page"],
+          "metrics": [365, 320, 52, 18.2, 65, 130, 35, 170, "More Info", 220]
+        },
+        {
+          "dimensions": ["2024-11-27", "Contact Page"],
+          "metrics": [215, 190, 29, 15.0, 50, 78, 23, 130, "Learn More", "Submit Form", 100]
+        },
+        {
+          "dimensions": ["2024-11-28", "Homepage"],
+          "metrics": [440, 390, 59, 20.4, 71, 185, 48, 210, "Subscribe", "Contact Us", 210]
+        },
+        {
+          "dimensions": ["2024-11-29", "Products Page"],
+          "metrics": [370, 325, 53, 18.4, 66, 133, 36, 175, "Buy Now", "Learn More", 230]
+        },
+        {
+          "dimensions": ["2024-11-30", "Contact Page"],
+          "metrics": [220, 195, 30, 15.2, 51, 80, 24, 135, "Submit Form", "Contact Us", 120]
+        }
+      ],
+      "columnHeaders": [
+        { "name": "date", "columnType": "DIMENSION", "dataType": "STRING" },
+        { "name": "page", "columnType": "DIMENSION", "dataType": "STRING" },
+        { "name": "pageviews", "columnType": "METRIC", "dataType": "INTEGER" },
+        { "name": "sessions", "columnType": "METRIC", "dataType": "INTEGER" },
+        { "name": "bounces", "columnType": "METRIC", "dataType": "INTEGER" },
+        { "name": "bounceRate", "columnType": "METRIC", "dataType": "PERCENT" },
+        { "name": "avgSessionDuration", "columnType": "METRIC", "dataType": "TIME" },
+        { "name": "newUsers", "columnType": "METRIC", "dataType": "INTEGER" },
+        { "name": "goalCompletions", "columnType": "METRIC", "dataType": "INTEGER" },
+        { "name": "averageSessionDuration", "columnType": "METRIC", "dataType": "TIME" },
+        { "name": "mostClickedButtons", "columnType": "METRIC", "dataType": "STRING" },
+        { "name": "dailyUserInteraction", "columnType": "METRIC", "dataType": "INTEGER" }
+      ]
+    },
+    "summary": {
+      "totalSessions": 12000,
+      "totalPageviews": 13450,
+      "totalBounces": 1100,
+      "averageBounceRate": "18.3",
+      "totalNewUsers": 4700,
+      "totalGoalCompletions": 2300
+    }
+  }
+}

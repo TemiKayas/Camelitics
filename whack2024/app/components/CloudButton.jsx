@@ -55,21 +55,25 @@ const CloudButtonText = styled.div`
 
 export default function CloudButtonComponent() {
     return (
-        <Link href="/" passHref>
-            <CloudButtonContainer>
-                <CloudButtonWrapper>
+        <CloudButtonContainer>
+            <CloudButtonWrapper>
+                <Link href="/documentation" passHref>
                     <CloudButton src={CloudImage} alt="Cloud Button" width={300} height={300} />
                     <CloudButtonText>Documentation</CloudButtonText>
-                </CloudButtonWrapper>
-                <CloudButtonWrapper>
+                </Link>
+            </CloudButtonWrapper>
+            <CloudButtonWrapper>
+                <Link href="/demo" passHref> {/* Only change the Demo button's href */}
                     <CloudButton src={CloudImage} alt="Cloud Button" width={300} height={300} />
                     <CloudButtonText>Demo</CloudButtonText>
-                </CloudButtonWrapper>
-                <CloudButtonWrapper>
+                </Link>
+            </CloudButtonWrapper>
+            <CloudButtonWrapper>
+                <Link href="/about" passHref>
                     <CloudButton src={CloudImage} alt="Cloud Button" width={300} height={300} />
                     <CloudButtonText>About Us</CloudButtonText>
-                </CloudButtonWrapper>
-            </CloudButtonContainer>
-        </Link>
+                </Link>
+            </CloudButtonWrapper>
+        </CloudButtonContainer>
     );
 }
