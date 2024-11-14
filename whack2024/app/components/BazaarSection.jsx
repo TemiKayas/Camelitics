@@ -3,7 +3,6 @@ import Camel from "@/app/components/Camel";
 import AddOnButton from "@/app/components/AddOnButton";
 import CloudButtonComponent from "@/app/components/CloudButton";
 
-
 export default function BazaarSection() {
     return (
         <BoxSection
@@ -13,14 +12,19 @@ export default function BazaarSection() {
                 backgroundImage: `url('/Camelitics BG.png')`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
-                position: "relative", // Ensures FloatingCamel and button are positioned within this box
+                position: "relative",
                 overflow: "hidden",
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                justifyContent: "center",
+                textAlign: "center",
             }}
         >
-            {/* Ensure the button is visible above the background */}
-
-            <CloudButtonComponent/>
-            <AddOnButton />
+            <CloudButtonComponent />
+            <div style={{ position: "absolute", right: "20px", top: "50%", transform: "translateY(-50%)" }}>
+                <AddOnButton />
+            </div>
             <Camel />
         </BoxSection>
     );

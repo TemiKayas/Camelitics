@@ -47,7 +47,7 @@ const CloudButtonText = styled.div`
     z-index: 1;
     transform: translate(-50%, -50%);
     color: white;
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: bold;
     pointer-events: none; // Ensure the text does not interfere with button clicks
     color: black;

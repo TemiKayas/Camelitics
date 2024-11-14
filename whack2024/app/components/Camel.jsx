@@ -55,7 +55,7 @@ export default function Camel() {
     return (
         <>
         <FloatingCamelContainer>
-            <StyledSlogan variant="caption">Hop on the Magic Carpet</StyledSlogan>
+            <Typography variant="caption">Hop on the Magic Carpet</Typography>
             <GlowingImage src={Mascot} alt="Levitating Camel" width={400} height={400} />
 
         </FloatingCamelContainer>

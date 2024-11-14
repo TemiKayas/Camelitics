@@ -9,7 +9,11 @@ import { Visibility, Pageview, TrendingUp, GroupAdd, CheckCircle, Percent, Home 
 // Styled Components for layout and theming
 const PageContainer = styled(Box)`
     padding: 24px;
-    background-color: #e8eaf6;  // Soft blue background for a business-like appearance
+    background: linear-gradient(to bottom, #f9e4b7, #f4c29f); /* Soft desert gradient */
+    background-image: url('/desertBackground.jpg'); /* Optional desert pattern image */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     min-height: 100vh;
     font-family: 'Arial, sans-serif';
 `;
@@ -17,7 +21,7 @@ const PageContainer = styled(Box)`
 const SectionTitle = styled(Typography)`
     font-size: 1.5rem;
     font-weight: bold;
-    color: #3f51b5;
+    color: #b5651d; /* Warm brown color for desert theme */
     margin-bottom: 16px;
 `;
 
@@ -26,7 +30,7 @@ const StyledCard = styled(Card)`
     margin-bottom: 24px;
     border-radius: 12px;
     padding: 16px;
-    background-color: #ffffff;
+    background-color: #fffaf0; /* Light, sandy color */
 `;
 
 const StatItem = styled(Box)`
@@ -40,7 +44,7 @@ const StatItem = styled(Box)`
 `;
 
 const StatIcon = styled(Box)`
-    color: #3f51b5;
+    color: #b5651d; /* Desert brown color */
     margin-right: 12px;
     display: flex;
     align-items: center;
@@ -54,7 +58,7 @@ const StatText = styled(Typography)`
 const StatValue = styled(Typography)`
     font-size: 1.5rem;
     font-weight: bold;
-    color: #2e7d32;
+    color: #8c4b1f; /* Darker desert color */
 `;
 
 const ChartContainer = styled.div`
@@ -70,7 +74,15 @@ const Header = styled(Box)`
 `;
 
 const BackButton = styled(IconButton)`
-    color: #3f51b5;
+    color: #b5651d; /* Desert color for the home button */
+`;
+
+const StyledButton = styled(Button)`
+    background-color: #d9a66c !important; /* Warm sand color */
+    color: #ffffff !important;
+    &:hover {
+        background-color: #c68a4f !important; /* Darker shade on hover */
+    }
 `;
 
 export default function HomePage() {
@@ -181,7 +193,7 @@ export default function HomePage() {
                 </BackButton>
             </Header>
 
-            <Button variant="contained" color="primary" onClick={() => {
+            <StyledButton variant="contained" onClick={() => {
                 captureImage(summaryRef.current, 'summary');
                 captureImage(sessionChartRef.current, 'sessions_pageviews');
                 captureImage(bounceRateChartRef.current, 'bounce_goal');
@@ -189,11 +201,11 @@ export default function HomePage() {
                 captureImage(buttonClicksChartRef.current, 'button_clicks');
             }}>
                 Generate Graphs
-            </Button>
+            </StyledButton>
 
-            <Button variant="contained" color="secondary" onClick={clearImages} style={{ marginLeft: '10px' }}>
+            <StyledButton variant="contained" color="secondary" onClick={clearImages} style={{ marginLeft: '10px' }}>
                 Clear Images
-            </Button>
+            </StyledButton>
 
             {analyticsData ? (
                 <>

@@ -46,7 +46,7 @@ export default function AddOnButton() {
                 },
             }}
         >
-            Try in Adobe Express
+            Try in Adobe
         </Button>
     )
 }

@@ -44,7 +44,7 @@ const AboutUs = () => {
     const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
 
     return (
-        <Container maxWidth="lg" sx={{ mt: 4, mb: 8, color: brown[900] }}>
+        <Container maxWidth="xl" sx={{ mt: 4, mb: 8, color: brown[900] }}>
             <Header />
             <Typography variant="h3" sx={{ pt: 1, color: amber[700], textAlign: 'center', mb: 2 }}>
                 About Us
@@ -64,10 +64,10 @@ const AboutUs = () => {
             <Box
                 sx={{
                     display: 'flex',
-                    flexWrap: 'wrap',
+                    flexWrap: 'nowrap',
                     gap: 4,
                     justifyContent: 'center',
-                    flexDirection: isSmallScreen ? 'column' : 'row',
+                    overflow: 'auto',
                 }}
             >
                 {developers.map((dev, index) => (
